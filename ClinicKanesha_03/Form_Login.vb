@@ -32,6 +32,14 @@ Public Class Form_Login
             If Rd.HasRows Then
                 Me.Close()
                 Call Init_open()
+                FormMain.labelUid.Text = Rd!user_id
+                FormMain.labelUname.Text = Rd!user_name
+                FormMain.labelAuth.Text = Rd!user_auth
+
+                If FormMain.labelAuth.Text = "user" Then
+                    FormMain.AdminToolStripMenuItem.Enabled = False
+                End If
+
             Else
                 MsgBox("Username or Password Incorrect!")
             End If

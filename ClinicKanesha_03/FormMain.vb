@@ -13,10 +13,16 @@
         ConsultationToolStripMenuItem.Enabled = False
         PrescriptionMedToolStripMenuItem.Enabled = False
 
+        labelUid.Text = ""
+        labelUname.Text = ""
+        labelAuth.Text = ""
+
+
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call Initial_close()
+        labelDate.Text = Today
     End Sub
 
     Private Sub LoginToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoginToolStripMenuItem.Click
@@ -29,5 +35,26 @@
 
     Private Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseToolStripMenuItem.Click
         End
+    End Sub
+
+    Private Sub AdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminToolStripMenuItem.Click
+        MasterAdmin.ShowDialog()
+    End Sub
+
+    Private Sub PatientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PatientToolStripMenuItem.Click
+        MasterPatient.ShowDialog()
+    End Sub
+
+    Private Sub MedicineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MedicineToolStripMenuItem.Click
+        MasterMedicine.ShowDialog()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        labelTime.Text = TimeOfDay
+
+    End Sub
+
+    Private Sub PrescriptionMedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrescriptionMedToolStripMenuItem.Click
+        TscMedicine.ShowDialog()
     End Sub
 End Class

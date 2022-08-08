@@ -22,6 +22,7 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,7 +36,20 @@ Partial Class FormMain
         Me.TransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrescriptionMedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.SLabel_uid = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.labelUid = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.SLabel_uname = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.labelUname = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.SLabel_auth = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.labelAuth = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.SLabel_Time = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.labelTime = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.SLabel_Date = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.labelDate = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -57,13 +71,13 @@ Partial Class FormMain
         'LoginToolStripMenuItem
         '
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.LoginToolStripMenuItem.Text = "Login"
         '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ChangePasswordToolStripMenuItem
@@ -75,7 +89,7 @@ Partial Class FormMain
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'MasterToolStripMenuItem
@@ -113,7 +127,7 @@ Partial Class FormMain
         'ConsultationToolStripMenuItem
         '
         Me.ConsultationToolStripMenuItem.Name = "ConsultationToolStripMenuItem"
-        Me.ConsultationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ConsultationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ConsultationToolStripMenuItem.Text = "Consultation"
         '
         'PrescriptionMedToolStripMenuItem
@@ -122,11 +136,80 @@ Partial Class FormMain
         Me.PrescriptionMedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PrescriptionMedToolStripMenuItem.Text = "Prescription Med"
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SLabel_uid, Me.labelUid, Me.SLabel_uname, Me.labelUname, Me.SLabel_auth, Me.labelAuth, Me.SLabel_Time, Me.labelTime, Me.SLabel_Date, Me.labelDate})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 428)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(800, 22)
+        Me.StatusStrip1.TabIndex = 1
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'SLabel_uid
+        '
+        Me.SLabel_uid.Name = "SLabel_uid"
+        Me.SLabel_uid.Size = New System.Drawing.Size(34, 17)
+        Me.SLabel_uid.Text = "Uid : "
+        '
+        'labelUid
+        '
+        Me.labelUid.Name = "labelUid"
+        Me.labelUid.Size = New System.Drawing.Size(0, 17)
+        '
+        'SLabel_uname
+        '
+        Me.SLabel_uname.Name = "SLabel_uname"
+        Me.SLabel_uname.Size = New System.Drawing.Size(48, 17)
+        Me.SLabel_uname.Text = "Name : "
+        '
+        'labelUname
+        '
+        Me.labelUname.Name = "labelUname"
+        Me.labelUname.Size = New System.Drawing.Size(0, 17)
+        '
+        'SLabel_auth
+        '
+        Me.SLabel_auth.Name = "SLabel_auth"
+        Me.SLabel_auth.Size = New System.Drawing.Size(42, 17)
+        Me.SLabel_auth.Text = "Auth : "
+        '
+        'labelAuth
+        '
+        Me.labelAuth.Name = "labelAuth"
+        Me.labelAuth.Size = New System.Drawing.Size(0, 17)
+        '
+        'SLabel_Time
+        '
+        Me.SLabel_Time.Name = "SLabel_Time"
+        Me.SLabel_Time.Size = New System.Drawing.Size(42, 17)
+        Me.SLabel_Time.Text = "Time : "
+        '
+        'labelTime
+        '
+        Me.labelTime.Name = "labelTime"
+        Me.labelTime.Size = New System.Drawing.Size(0, 17)
+        '
+        'SLabel_Date
+        '
+        Me.SLabel_Date.Name = "SLabel_Date"
+        Me.SLabel_Date.Size = New System.Drawing.Size(40, 17)
+        Me.SLabel_Date.Text = "Date : "
+        '
+        'labelDate
+        '
+        Me.labelDate.Name = "labelDate"
+        Me.labelDate.Size = New System.Drawing.Size(0, 17)
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FormMain"
@@ -134,6 +217,8 @@ Partial Class FormMain
         Me.Text = "Main Menu Cinic Kanesha"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -152,4 +237,16 @@ Partial Class FormMain
     Friend WithEvents ConsultationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ChangePasswordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PrescriptionMedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents SLabel_uid As ToolStripStatusLabel
+    Friend WithEvents labelUid As ToolStripStatusLabel
+    Friend WithEvents SLabel_uname As ToolStripStatusLabel
+    Friend WithEvents labelUname As ToolStripStatusLabel
+    Friend WithEvents SLabel_auth As ToolStripStatusLabel
+    Friend WithEvents labelAuth As ToolStripStatusLabel
+    Friend WithEvents SLabel_Time As ToolStripStatusLabel
+    Friend WithEvents labelTime As ToolStripStatusLabel
+    Friend WithEvents SLabel_Date As ToolStripStatusLabel
+    Friend WithEvents labelDate As ToolStripStatusLabel
+    Friend WithEvents Timer1 As Timer
 End Class
