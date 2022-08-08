@@ -133,7 +133,7 @@ Partial Class FormMain
         'PrescriptionMedToolStripMenuItem
         '
         Me.PrescriptionMedToolStripMenuItem.Name = "PrescriptionMedToolStripMenuItem"
-        Me.PrescriptionMedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PrescriptionMedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.PrescriptionMedToolStripMenuItem.Text = "Prescription Med"
         '
         'StatusStrip1
@@ -215,6 +215,7 @@ Partial Class FormMain
         Me.Name = "FormMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main Menu Cinic Kanesha"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
