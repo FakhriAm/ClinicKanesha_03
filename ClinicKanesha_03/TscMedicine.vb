@@ -53,7 +53,7 @@ Public Class TscMedicine
         Cmd = New OdbcCommand("Select * From list_medicine", Conn)
         Rd = Cmd.ExecuteReader
         Do While Rd.Read
-            medName.Items.Add(Rd.Item(2))
+            medName.Items.Add(Rd.Item(1))
         Loop
     End Sub
 
